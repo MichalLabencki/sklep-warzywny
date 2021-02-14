@@ -20,9 +20,9 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-            .withUser("user")
-            .password("{noop}password")
-            .roles("USER");
+                .withUser("user")
+                .password("{noop}password")
+                .roles("USER");
     }
 
     @Override
@@ -47,8 +47,8 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
                 .permitAll();
 
         http.headers()
-            .frameOptions()
-            .disable();
+                .frameOptions()
+                .disable();
 
 
     }

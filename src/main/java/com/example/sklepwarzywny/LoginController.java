@@ -17,7 +17,7 @@ public class LoginController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
         return "index";
-        }
+    }
 
 //    @GetMapping(value = "/redirect")
 //    public String redirect() {

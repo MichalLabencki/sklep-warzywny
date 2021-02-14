@@ -56,7 +56,4 @@ public class BootstrapController {
         return new ModelAndView("bootstrap-index",data);
     }
 
-
-
-
 }
