@@ -1,52 +1,38 @@
 
-body{
-    background-color: #cccccc;
-    border: 2px solid #009900;
-    height: 260px;
-    width: 400px;
-    margin-left: 15px;
-    padding-left:5px;
-    padding-right:5px;
+
+body {
+    background-color: #65ac1d;
 }
 
-/*.inputbox {*/
-/*    background-color:#FFFFFF;*/
-/*    color: #333333;*/
-/*    width:150px;*/
-/*    border-width:1px;*/
-/*    border-style:solid;*/
-/*    border-color:#808080;*/
-/*}*/
 
-/*.inputbox:hover {*/
-/*    border-width:1px;*/
-/*    border-style:solid;*/
-/*    border-color:#11A3EA;*/
-/*}*/
 
-/*.inputbox:focus {*/
-/*    border-width:1px;*/
-/*    border-style:solid;*/
-/*    border-color:#11A3EA;*/
-/*    color: #0F4987;*/
-/*}*/
 
-/*.submitButton {*/
-/*    background-color: #ffffff;*/
-/*    color: #000000;*/
-/*    background: #ffffff;*/
-/*    border: 1px solid #cccccc;*/
-/*    text-align: center;*/
-/*    width: auto;*/
-/*    padding: 2px 3px 2px 3px;*/
-/*}*/
+.row {
 
-/*h2{*/
-/*    color:red;*/
-/*}*/
-/*h1{*/
-/*    color: #0000ff;*/
-/*}*/
-/*h3{*/
-/*    color: #002aff;*/
-/*}*/
+
+}
+
+
+.col-sm {
+    background-color: #606460;
+        border: 2px solid #990005;
+    height: 900px;
+    width: 250px;
+        font-size:24px;
+
+}
+
+.col-sm-1 {
+    background-color: #7dba94;
+            height: auto;
+            width: auto;
+}
+
+
+
+
+
+
+
+
+

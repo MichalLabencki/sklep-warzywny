@@ -15,6 +15,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link href="<c:url value="style.css" />" rel="stylesheet">
+    <title>Spring Shopping Page</title>
+
     <title>Create an account</title>
 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +31,8 @@
 </head>
 
 <body>
+
+
 
 <div class="container">
 

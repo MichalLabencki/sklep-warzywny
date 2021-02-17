@@ -1,4 +1,4 @@
-package com.example.sklepwarzywny;
+package com.example.sklepwarzywny.user;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

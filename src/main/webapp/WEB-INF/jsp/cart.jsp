@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
 
 
 <html>
@@ -13,7 +14,7 @@
     <thead>
     <th>Product Name</th>
     <th>Price</th>
-    <th>Action</th>
+    <th>Count</th>
     </thead>
     <div>    <c:forEach items="${products}" var="product">
         <tr>
@@ -21,9 +22,12 @@
             <td>
                 <form action="/cart/delete" method="post">
                     <input type="hidden" name="productId" value="${product.getId()}">
-                    <input type="submit" value="delete">
+                    <span>${product.getPrice()}</span>
+                    <input type="submit" name="Action" value="delete">
                 </form>
             </td>
+            <td><span>${product.getCount()}</span></td>
+
         </tr>
 
 

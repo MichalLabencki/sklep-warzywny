@@ -1,6 +1,6 @@
-package com.example.sklepwarzywny.Registration;
+package com.example.sklepwarzywny.registration;
 
-import com.example.sklepwarzywny.UserForm;
+import com.example.sklepwarzywny.user.UserForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

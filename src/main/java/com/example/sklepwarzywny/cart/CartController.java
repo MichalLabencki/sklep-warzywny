@@ -45,7 +45,7 @@ public class CartController {
     private List<ProductDto> asDtos(List<Product> products) {
         List<ProductDto> productDtos = new ArrayList<>();
         for (Product product : products) {
-            productDtos.add(new ProductDto(product.getId(), product.getName(), product.getPrice()));
+            productDtos.add(new ProductDto(product.getId(), product.getName(), product.getPrice(), product.getCount()));
         }
         return productDtos;
     }

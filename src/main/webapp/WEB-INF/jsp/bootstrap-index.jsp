@@ -54,6 +54,7 @@
             <div>
                 <span>Total count ${sum}</span>
             </div>
+            lala
         </div>
     </div>
 </div>

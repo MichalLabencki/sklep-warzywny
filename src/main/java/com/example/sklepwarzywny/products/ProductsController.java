@@ -29,7 +29,7 @@ public class ProductsController {
         List<Product> allProducts = products.getAll();
         List<ProductDto> productDtos = new ArrayList<>();
         for (Product product : allProducts) {
-            productDtos.add(new ProductDto(product.getId(), product.getName(), product.getPrice()));
+            productDtos.add(new ProductDto(product.getId(), product.getName(), product.getPrice(), product.getCount()));
         }
         ModelAndView modelAndView = new ModelAndView("products");
         modelAndView.addObject("products", productDtos);
@@ -43,7 +43,7 @@ public class ProductsController {
         List<Product> allProducts = products.addDefaultProducts();
         List<ProductDto> productDtos = new ArrayList<>();
         for (Product product : allProducts) {
-            productDtos.add(new ProductDto(product.getId(), product.getName(), product.getPrice()));
+            productDtos.add(new ProductDto(product.getId(), product.getName(), product.getPrice(), product.getCount()));
         }
         ModelAndView modelAndView = new ModelAndView("products");
         modelAndView.addObject("products", productDtos);

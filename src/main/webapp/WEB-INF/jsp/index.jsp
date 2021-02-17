@@ -1,65 +1,47 @@
-<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <link rel="stylesheet" type="text/css" href="../../style.css"/>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link href="<c:url value="style.css" />" rel="stylesheet">
-    <title>Spring Shopping Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Spring Boot Application</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<h2><center>Welcome to my Shop</center></h2>
-<br>
+
+
+
 <div class="container">
     <div class="row">
-        <div class="col-sm-1" >
+        <div class="col-sm-1">
             <jsp:include page="navbar.jsp" />
         </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%--<p>Click below button to redirect the Products</p>--%>
 
-<%--<form:form method = "GET" action = "/products">--%>
+        <div class="col-sm">
 
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <td>--%>
+            <center><h1>Welcome in my Website</h1></center>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>My application is simple web shop using Spring Boot/Spring Security/Spring Data(h2)</h2>
+        </div>
+    </div>
+</div>
 
-<%--                <input type = "submit" value = "Products"/>--%>
-
-<%--            </td>--%>
-<%--        </tr>--%>
-<%--    </table>--%>
-<%--</form:form>--%>
-
-<%--<br>--%>
-<%--<br>--%>
-<%--<br>--%>
-<%--<br>--%>
-
-
-
-<%--<p>Click below button to redirect the Cart</p>--%>
-
-<%--<form:form method = "GET" action = "/cart">--%>
-
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <td>--%>
-
-<%--                <input type = "submit" value = "Cart"/>--%>
-
-<%--            </td>--%>
-<%--        </tr>--%>
-<%--    </table>--%>
-<%--</form:form>--%>
 
 </body>
-
 </html>

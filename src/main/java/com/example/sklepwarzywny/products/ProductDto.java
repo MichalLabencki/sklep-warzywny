@@ -8,12 +8,14 @@ public class ProductDto {
     private final Long id;
     private final String name;
     private final Double price;
+    private Integer count;
 
 
-    public ProductDto(Long id, String name, Double price) {
+    public ProductDto(Long id, String name, Double price, Integer count) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.count = count;
     }
 
     public Long getId() {
@@ -27,6 +29,8 @@ public class ProductDto {
     public Double getPrice() {
         return this.price;
     }
+    public Integer getCount() { return  this.count; }
+    public Integer setCount() { return  this.count; }
 
     @Override
     public boolean equals(Object o) {
@@ -38,6 +42,6 @@ public class ProductDto {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price);
+        return Objects.hash(id, name, price,count);
     }
 }
