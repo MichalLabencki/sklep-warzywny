@@ -20,9 +20,8 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("user")
-                .password("{noop}password")
-                .roles("USER");
+                .withUser("user").password("{noop}password").roles("USER")
+        .and().withUser("user2").password("{noop}12345").roles("USER","ADMIN");
     }
 
     @Override
@@ -40,7 +39,7 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
                 .antMatchers("/products")
                 .hasAnyRole("USER")
                 .antMatchers("/cart")
-                .hasAnyRole("USER")
+                .hasAnyRole("ADMIN")
                 .and()
                 .formLogin()
                 .loginPage("/login")

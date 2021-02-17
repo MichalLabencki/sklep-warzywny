@@ -1,7 +1,7 @@
 package com.example.sklepwarzywny.products;
 
 import com.example.sklepwarzywny.Utils;
-import com.example.sklepwarzywny.bootstrap.BootstrapElement;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
