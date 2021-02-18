@@ -31,16 +31,23 @@
 
         <div class="col-sm">
 
-            <center><h1>Welcome in my Website</h1></center>
+            <center><h1>Welcome in my Web Shop</h1></center>
             <br>
             <br>
-            <br>
-            <br>
+            <form align="right" name="form1" method="post" action="log_out.php">
+                <label class="logoutLblPos">
+                    <input name="submit2" type="submit" id="submit2" value="log out">
+                </label>
+            </form>
             <br>
             <h2>My application is simple web shop using Spring Boot/Spring Security/Spring Data(h2)</h2>
         </div>
     </div>
+
+
+
 </div>
+
 
 
 </body>

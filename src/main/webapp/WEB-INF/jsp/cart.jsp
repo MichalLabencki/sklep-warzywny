@@ -45,7 +45,7 @@
             <td>
 
                 <div>
-                    <span>Total count ${sum}</span>
+                    <span>Total count = ${price.totalCount}</span>
                 </div>
 
             </td>

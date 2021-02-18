@@ -22,7 +22,7 @@ public class CartService {
 //        products.compute(product.getId(), )
         products.put(product.getId(), pp);
         return new ArrayList<>(products.values());
-//dodanie do bazy, czemu wywala jak domyslne count,
+
     }
 
     public List<Product> removeFromCart(Product product) {
@@ -45,10 +45,10 @@ public class CartService {
 
 // sumowanie koszyka
 
-public double countCart() {
+public double totalCart() {
     AtomicReference<Double> sum = new AtomicReference<>(0.0);
         products.forEach((id, product2) -> sum.updateAndGet(v -> v + product2.getPrice()));
-        return countCart();
+        return totalCart();
                 }
 
 
