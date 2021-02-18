@@ -1,5 +1,7 @@
 package com.example.sklepwarzywny;
 
+import com.example.sklepwarzywny.user.AuthorisationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -12,7 +14,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurityConfigurerAdapter {
 
-//    @Bean
+    private AuthorisationService authorisationService;
+
+    @Autowired
+    public SecurityConfig(AuthorisationService authorisationService) {
+        this.authorisationService = authorisationService;
+    }
+    //    @Bean
 //    public BCryptPasswordEncoder bCryptPasswordEncoder() {
 //        return new BCryptPasswordEncoder();
 //    }
@@ -37,13 +45,14 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
 //                .antMatchers("/testdb", "/")
 //                .permitAll()
                 .antMatchers("/products")
-                .hasAnyRole("USER")
+                .authenticated()
                 .antMatchers("/cart")
-                .hasAnyRole("ADMIN")
+                .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .permitAll();
+                .permitAll().and().authenticationProvider(this.authorisationService);
+
 
         http.headers()
                 .frameOptions()

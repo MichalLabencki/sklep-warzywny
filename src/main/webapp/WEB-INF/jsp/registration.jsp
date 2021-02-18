@@ -36,34 +36,60 @@
 
 <div class="container">
 
-    <form:form method="POST" modelAttribute="userForm" class="form-signin">
-        <h2 class="form-signin-heading">Create your account</h2>
-        <spring:bind path="username">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="username" class="form-control" placeholder="Username"
-                            autofocus="true"></form:input>
-                <form:errors path="username"></form:errors>
-            </div>
-        </spring:bind>
+    <form method="POST" action="/registration"  class="form-signin">
+        <label for="login">login:</label><br>
+        <input type="text" id="login" name="login"><br>
+        <label for="password">Last name:password</label><br>
+        <input type="text" id="password" name="password">
+        <label for="passwordConfirmation">Last name:password-confirmation</label><br>
+        <input type="text" id="passwordConfirmation" name="passwordConfirmation">
+        <input type="submit" value="Rejestruj">
+    </form>
 
-        <spring:bind path="password">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
-                <form:errors path="password"></form:errors>
-            </div>
-        </spring:bind>
+<%--    <form:form method="POST" action="/registration"  class="form-signin">--%>
+<%--        <h2 class="form-signin-heading">Create your account</h2>--%>
+<%--        <spring:bind path="username">--%>
+<%--            <div class="form-group ${status.error ? 'has-error' : ''}">--%>
+<%--                <form:input type="text" path="username" class="form-control" placeholder="Username"--%>
+<%--                            autofocus="true"></form:input>--%>
+<%--                <form:errors path="username"></form:errors>--%>
+<%--            </div>--%>
+<%--        </spring:bind>--%>
 
-        <spring:bind path="passwordConfirm">
-            <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="password" path="passwordConfirm" class="form-control"
-                            placeholder="Confirm your password"></form:input>
-                <form:errors path="passwordConfirm"></form:errors>
-            </div>
-        </spring:bind>
+<%--        <spring:bind path="password">--%>
+<%--            <div class="form-group ${status.error ? 'has-error' : ''}">--%>
+<%--                <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>--%>
+<%--                <form:errors path="password"></form:errors>--%>
+<%--            </div>--%>
+<%--        </spring:bind>--%>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+<%--        <spring:bind path="passwordConfirm">--%>
+<%--            <div class="form-group ${status.error ? 'has-error' : ''}">--%>
+<%--                <form:input type="password" path="passwordConfirm" class="form-control"--%>
+<%--                            placeholder="Confirm your password"></form:input>--%>
+<%--                <form:errors path="passwordConfirm"></form:errors>--%>
+<%--            </div>--%>
+<%--        </spring:bind>--%>
+
+<%--        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>--%>
+<%--    </form:form>--%>
+    ------------------------------------------------
+
+    <p>Click below button to redirect the Login Page</p>
+
+    <form:form method = "GET" action = "/login">
+
+        <table>
+            <tr>
+                <td>
+
+                    <input type = "submit" value = "Login Page"/>
+
+                </td>
+            </tr>
+        </table>
     </form:form>
-
+    ------------------------------------------------
 </div>
 <!-- /container -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

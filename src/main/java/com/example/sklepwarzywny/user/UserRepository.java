@@ -1,14 +1,14 @@
-//package com.example.sklepwarzywny.user;
-//
-//
-//import org.apache.catalina.User;
-//import org.springframework.data.repository.CrudRepository;
-//
-//import java.util.Optional;
-//
-//interface UserRepository extends CrudRepository<User, Long> {
-//
-//    Optional<User> findByUsername(String username);
-//
-//
-//}
+package com.example.sklepwarzywny.user;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+interface UserRepository extends CrudRepository<User, Long> {
+
+    Optional<User> findByUsername(String username);
+
+
+}
