@@ -31,10 +31,10 @@
 
         <div class="col-sm">
 
-            <center><h1>Welcome in my Web Shop</h1></center>
+            <center><h1>Welcome in my Website </h1></center>
             <br>
             <br>
-            <form align="right" name="form1" method="post" action="log_out.php">
+            <form align="right" name="form1" method="post" action="/logout">
                 <label class="logoutLblPos">
                     <input name="submit2" type="submit" id="submit2" value="log out">
                 </label>
