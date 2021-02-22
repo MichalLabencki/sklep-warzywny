@@ -3,8 +3,7 @@ package com.example.sklepwarzywny.products;
 import java.util.Objects;
 
 public class ProductDto {
-
-
+    
     private final Long id;
     private final String name;
     private final Double price;

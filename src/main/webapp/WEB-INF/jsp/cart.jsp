@@ -45,7 +45,8 @@
             <td>
 
                 <div>
-                    <span>Total count = ${price.totalCount}</span>
+                    <c:forEach items =
+                    <span>Total count = ${price.totalCount} x ${product.getPrice()} </span>
                 </div>
 
             </td>
