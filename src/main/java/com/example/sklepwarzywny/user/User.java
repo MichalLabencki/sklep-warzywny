@@ -1,12 +1,11 @@
 package com.example.sklepwarzywny.user;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.sklepwarzywny.cart.CartService;
+import lombok.*;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "users")
 @NoArgsConstructor
@@ -15,7 +14,7 @@ public class User  {
 
     @Id
     @Getter
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
 
@@ -33,5 +32,9 @@ public class User  {
     @Setter
 //    @Column(name = "passwordConfirm")
     private String passwordConfirm;
+
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "cartservice_id", referencedColumnName = "id")
+//    private CartService cartService;
 
 }

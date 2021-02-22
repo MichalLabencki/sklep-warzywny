@@ -37,5 +37,6 @@ public class Product {
         this.price = price;
     }
 
-
+//    @OneToOne(mappedBy = "CartService")
+//    private Employee employee;
 }

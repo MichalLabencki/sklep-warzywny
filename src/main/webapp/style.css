@@ -4,6 +4,9 @@ body {
     background-color: #65ac1d;
 }
 
+html,body {
+    height: 100%;
+}
 
 
 
