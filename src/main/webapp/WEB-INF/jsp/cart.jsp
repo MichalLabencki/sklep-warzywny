@@ -45,7 +45,7 @@
             <td>
 
                 <div>
-                    <span>Total count ${total}</span>
+                    <span>Total count =  ${total}</span>
 
                 </div>
 
