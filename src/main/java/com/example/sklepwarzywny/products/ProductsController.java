@@ -57,6 +57,6 @@ public class ProductsController {
         products.remove(id);
         Map<String, Object> data = new HashMap<>();
         data.put("products", products.getAll());
-        return new ModelAndView("redirect: cart");
+        return new ModelAndView("redirect:cart");
     }
 }

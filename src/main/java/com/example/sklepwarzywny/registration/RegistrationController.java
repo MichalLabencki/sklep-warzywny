@@ -32,7 +32,6 @@ public class RegistrationController {
 
 
 
-        // redirect do zrobienia na login
 
 
     }

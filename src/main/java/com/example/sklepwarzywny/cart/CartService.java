@@ -42,16 +42,21 @@ public class CartService {
     public List<Product> getCartState() {
         return new ArrayList<>(products.values());
     }
+    public static double round(double value, int places) {
+        if (places < 0) return 0;
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
+    }
 
-// sumowanie koszyka
-
-public double totalCart() {
-    AtomicReference<Double> sum = new AtomicReference<>(0.0);
-        products.forEach((id, product2) -> sum.updateAndGet(v -> v + product2.getPrice()));
-        return totalCart();
-                }
-
-
+    public double totalCart() {
+        AtomicReference<Double> out = new AtomicReference<>(0.0);
+        products.forEach((key, product) -> {
+            out.set((product.getPrice() * product.getCount()) + out.get());
+        });
+        return round(out.get(), 2);
+    }
 }
 
 

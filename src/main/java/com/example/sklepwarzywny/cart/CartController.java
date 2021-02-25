@@ -5,13 +5,11 @@ import com.example.sklepwarzywny.products.ProductDto;
 import com.example.sklepwarzywny.products.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("cart")
@@ -30,16 +28,18 @@ public class CartController {
     public ModelAndView displayCart() {
         ModelAndView modelAndView = new ModelAndView("cart");
         modelAndView.addObject("products", asDtos(cartService.getCartState()));
+        modelAndView.addObject("total", cartService.totalCart());
         return modelAndView;
     }
 
     @PostMapping("add")
-    public ModelAndView addToCart(@ModelAttribute("productId") Long productId) {
+    public String addToCart(@ModelAttribute("productId") Long productId) {
         Product product = productsService.getById(productId);
         List<Product> cartProducts = cartService.addToCart(product);
         ModelAndView modelAndView = new ModelAndView("cart");
         modelAndView.addObject("products", asDtos(cartProducts));
-        return modelAndView;
+        return "redirect:/cart";
+//        return new ModelAndView("cart");
     }
 
     private List<ProductDto> asDtos(List<Product> products) {
@@ -56,12 +56,12 @@ public class CartController {
 
 
     @PostMapping("delete")
-    public ModelAndView removeFromCart(@ModelAttribute("productId") Long productId) {
+    public String removeFromCart(@ModelAttribute("productId") Long productId) {
         Product product = productsService.getById(productId);
         List<Product> cartProducts = cartService.removeFromCart(product);
         ModelAndView modelAndView = new ModelAndView("cart");
         modelAndView.addObject("products", asDtos(cartProducts));
-        return modelAndView;
+        return "redirect:/cart";
 //
     }
 }
