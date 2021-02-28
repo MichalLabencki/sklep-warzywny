@@ -30,8 +30,5 @@ public class User  {
 //    @Column(name = "passwordConfirm")
     private String passwordConfirm;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "cartservice_id", referencedColumnName = "id")
-//    private CartService cartService;
 
 }

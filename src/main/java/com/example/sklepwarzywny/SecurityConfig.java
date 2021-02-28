@@ -21,11 +21,6 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
     public SecurityConfig(AuthorisationService authorisationService) {
         this.authorisationService = authorisationService;
     }
-    //    @Bean
-//    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
-
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
@@ -39,12 +34,8 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
                 .csrf()
                 .disable()
                 .authorizeRequests()
-//                .antMatchers("/**").hasAnyRole("USER")
-
                 .antMatchers("/registration", "/")
                 .permitAll()
-//                .antMatchers("/testdb", "/")
-//                .permitAll()
                 .antMatchers("/products")
                 .authenticated()
                 .antMatchers("/cart")
@@ -53,14 +44,8 @@ public class SecurityConfig<MyBasicAuthenticationEntryPoint> extends WebSecurity
                 .formLogin()
                 .loginPage("/login")
                 .permitAll().and().authenticationProvider(this.authorisationService);
-
-
-
-
-        http.headers()
+                http.headers()
                 .frameOptions()
                 .disable();
-
-
     }
 }

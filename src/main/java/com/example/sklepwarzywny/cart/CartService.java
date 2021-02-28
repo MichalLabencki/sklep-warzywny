@@ -18,8 +18,6 @@ public class CartService {
             pp = products.get(product.getId());
             pp.setCount(pp.getCount() + 1);
         }
-//        products.getOrDefault(product.getId(),pp).setCount(pp.getCount() + 1);
-//        products.compute(product.getId(), )
         products.put(product.getId(), pp);
         return new ArrayList<>(products.values());
 

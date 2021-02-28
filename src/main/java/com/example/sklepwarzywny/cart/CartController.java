@@ -39,7 +39,6 @@ public class CartController {
         ModelAndView modelAndView = new ModelAndView("cart");
         modelAndView.addObject("products", asDtos(cartProducts));
         return "redirect:/cart";
-//        return new ModelAndView("cart");
     }
 
     private List<ProductDto> asDtos(List<Product> products) {
@@ -49,10 +48,6 @@ public class CartController {
         }
         return productDtos;
     }
-
-// wartość koszyka
-
-// usuwanie z koszyka
 
 
     @PostMapping("delete")

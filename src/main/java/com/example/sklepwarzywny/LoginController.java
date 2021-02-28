@@ -19,15 +19,7 @@ public class LoginController {
         return "index";
     }
 
-//    @GetMapping(value = "/redirect")
-//    public String redirect() {
-//        return "redirect:products";
-//    }
-//
-//    @RequestMapping("/products")
-//    public String redirectToProducts() {
-//        return "redirect:products";
-//    }
+
 
 
 }
