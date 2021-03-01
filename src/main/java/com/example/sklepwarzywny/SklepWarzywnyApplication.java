@@ -14,10 +14,6 @@ public class SklepWarzywnyApplication {
 	private static Session db;
 
 	public static void main(String[] args) {
-//		Query q = db.createQuery("from User u where u.id = 1", User.class);
-//		User u = (User) q.getSingleResult();
-//		ConfigurableApplicationContext configurableApplicationContext = SpringApplication.r
-//		UserRepository userRepository = configurable
 		SpringApplication.run(SklepWarzywnyApplication.class, args);
 	}
 
