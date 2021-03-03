@@ -48,8 +48,6 @@ public class CartController {
         }
         return productDtos;
     }
-
-
     @PostMapping("delete")
     public String removeFromCart(@ModelAttribute("productId") Long productId) {
         Product product = productsService.getById(productId);

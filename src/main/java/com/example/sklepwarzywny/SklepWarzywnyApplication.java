@@ -11,7 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class SklepWarzywnyApplication {
 
-	private static Session db;
+//	private static Session db;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SklepWarzywnyApplication.class, args);
